@@ -3,7 +3,7 @@
 #define CAVE_EXPLORE_HUMAN_H
 #include "Charactor.h"
 
-class Human:Charactor {
+class Human: public Charactor {
 public:
     Human();
     ~Human();

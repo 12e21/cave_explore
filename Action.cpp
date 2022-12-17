@@ -3,3 +3,5 @@
 //
 
 #include "Action.h"
+Action::Action() =default;
+Action::~Action() =default;

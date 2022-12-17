@@ -5,6 +5,8 @@ Charactor::Charactor() {
     this->level=1;
     this->blood_upper_limit=10;
     this->current_blood=10;
+    this->magic_power=10;
+    this->strength_power=10;
 }
 Charactor::~Charactor() =default;
 //属性
