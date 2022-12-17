@@ -26,3 +26,15 @@ int Charactor::get_current_blood() {
 void Charactor::set_current_blood(int current_blood_to_set) {
     this->current_blood=current_blood_to_set;
 }
+int Charactor::get_strength_power() {
+    return this->strength_power;
+}
+void Charactor::set_strength_power(int strength_power_to_set) {
+    this->strength_power=strength_power_to_set;
+}
+int Charactor::get_magic_power() {
+    return this->magic_power;
+}
+void Charactor::set_magic_power(int magic_power_to_set) {
+    this->magic_power=magic_power_to_set;
+}

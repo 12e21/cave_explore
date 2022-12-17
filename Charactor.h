@@ -18,6 +18,10 @@ public:
     void set_blood_upper_limit(int blood_upper_limit_to_set);
     int get_current_blood();
     void set_current_blood(int current_blood_to_set);
+    int get_magic_power();
+    void set_magic_power(int magic_power_to_set);
+    int get_strength_power();
+    void set_strength_power(int strength_power_to_set);
 
 private:
     //角色等级设定
@@ -26,6 +30,8 @@ private:
     int blood_upper_limit;
     //角色的当前血量
     int current_blood;
+    int magic_power;
+    int strength_power;
 };
 
 
