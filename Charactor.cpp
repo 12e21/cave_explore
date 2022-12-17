@@ -7,6 +7,7 @@ Charactor::Charactor() {
     this->current_blood=10;
     this->magic_power=10;
     this->strength_power=10;
+    this->name="initial_name";
 }
 Charactor::~Charactor() =default;
 //属性
