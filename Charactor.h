@@ -4,7 +4,7 @@
 
 #ifndef CAVE_EXPLORE_CHARACTOR_H
 #define CAVE_EXPLORE_CHARACTOR_H
-
+#include <iostream>
 
 class Charactor {
 public:
@@ -22,6 +22,8 @@ public:
     void set_magic_power(int magic_power_to_set);
     int get_strength_power();
     void set_strength_power(int strength_power_to_set);
+    std::string get_name();
+    void set_name(std::string name_to_set);
 
 private:
     //角色等级设定
@@ -32,6 +34,7 @@ private:
     int current_blood;
     int magic_power;
     int strength_power;
+    std::string name;
 };
 
 

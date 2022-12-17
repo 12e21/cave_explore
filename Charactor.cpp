@@ -40,3 +40,9 @@ int Charactor::get_magic_power() {
 void Charactor::set_magic_power(int magic_power_to_set) {
     this->magic_power=magic_power_to_set;
 }
+std::string Charactor::get_name() {
+    return this->name;
+}
+void Charactor::set_name(std::string name_to_set) {
+    this->name=name_to_set;
+}

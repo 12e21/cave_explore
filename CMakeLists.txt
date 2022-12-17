@@ -4,4 +4,4 @@ project(cave_explore)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(cave_explore main.cpp Charactor.cpp Action.cpp Fight.cpp Human.cpp
-                Engine.cpp Fight_engine.cpp)
+                Engine.cpp Fight_engine.cpp AI.cpp Fight_AI.cpp)
