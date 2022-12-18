@@ -8,6 +8,8 @@ class Fight_UI {
 public:
     void show_character_info(Charactor charactor);
     int get_player_skill_choice(Charactor charactor);
+    void battle_start(Charactor charactor1,Charactor charactor2);
+    void battle_over(Charactor winner,Charactor loser);
 private:
     Fight Fight_UI_Fight;
 };

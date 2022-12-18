@@ -24,3 +24,16 @@ int Fight_UI::get_player_skill_choice(Charactor charactor) {
     } while (this->Fight_UI_Fight.judge_if_can_use_skill(player_choice, charactor)!= true);
     return player_choice;
 }
+
+void Fight_UI::battle_start(Charactor charactor1, Charactor charactor2) {
+    std::cout<<"战斗双方:"<<charactor1.get_name()<<"("<<charactor1.get_level()<<")";
+    std::cout<<" VS ";
+    std::cout<<charactor2.get_name()<<"("<<charactor2.get_level()<<")"<<std::endl;
+    std::cout<<"战斗开始:"<<std::endl;
+}
+
+void Fight_UI::battle_over(Charactor winner, Charactor loser) {
+    std::cout<<"战斗结束"<<std::endl;
+    std::cout<<"胜者是: "<<winner.get_name()<<std::endl;
+    std::cout<<"败者是: "<<loser.get_name()<<std::endl;
+}
