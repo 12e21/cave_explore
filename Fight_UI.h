@@ -10,6 +10,7 @@ public:
     int get_player_skill_choice(Charactor charactor);
     void battle_start(Charactor charactor1,Charactor charactor2);
     void battle_over(Charactor winner,Charactor loser);
+    void call_skill_description(Charactor caller,int skill_id);
 private:
     Fight Fight_UI_Fight;
 };

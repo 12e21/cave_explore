@@ -14,6 +14,8 @@ public:
     void magic_heal_little_heal(Charactor& caller);
     void wait();
     bool judge_if_can_use_skill(int skill_id,Charactor& caller);
+    void call_skill_according_id(Charactor& caller,Charactor& passer,int skill_id);
+    std::string skill_id_to_name(int skill_id);
 private:
 };
 

@@ -37,3 +37,7 @@ void Fight_UI::battle_over(Charactor winner, Charactor loser) {
     std::cout<<"胜者是: "<<winner.get_name()<<std::endl;
     std::cout<<"败者是: "<<loser.get_name()<<std::endl;
 }
+
+void Fight_UI::call_skill_description(Charactor caller, int skill_id) {
+    std::cout<<caller.get_name()<<" 发动了 "<<Fight_UI_Fight.skill_id_to_name(skill_id)<<std::endl;
+}

@@ -38,3 +38,31 @@ bool Fight::judge_if_can_use_skill(int skill_id, Charactor &caller) {
         return false;
     }
 }
+
+//转换
+//根据技能id发动技能
+void Fight::call_skill_according_id(Charactor& caller, Charactor& passer, int skill_id) {
+    switch (skill_id) {
+        case 0:
+            this->strength_attack_bare_hit(caller,passer);
+            break;
+        case 1:
+            this->magic_heal_little_heal(caller);
+            break;
+        case 2:
+            this->wait();
+            break;
+    }
+}
+//技能id转技能名
+std::string Fight::skill_id_to_name(int skill_id) {
+    switch (skill_id) {
+        case 0:
+            return "空手击打";
+        case 1:
+            return "小治愈术";
+        case 2:
+            return "等待";
+    }
+    return "空技能";
+}
