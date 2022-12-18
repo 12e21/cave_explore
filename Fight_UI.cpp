@@ -8,3 +8,19 @@ void Fight_UI::show_character_info(Charactor charactor) {
     std::cout<<"体力:"<<charactor.get_strength_power()<<std::endl;
     std::cout<<"魔力:"<<charactor.get_magic_power()<<std::endl;
 }
+
+int Fight_UI::get_player_skill_choice(Charactor charactor) {
+    int player_choice=0;
+    std::cout<<"正在获取用户输入技能"<<std::endl;
+    std::cout<<"请选择,可选择的技能如下:"<<std::endl;
+    std::cout<<"技能           输入"<<std::endl;
+    std::cout<<"空手击打         0 "<<std::endl;
+    std::cout<<"小治愈术         1 "<<std::endl;
+    std::cout<<"等待             2 "<<std::endl;
+    std::cout<<"\n"<<std::endl;
+    do {
+        std::cout << "请输入你选择的符合条件的技能:" << std::endl;
+        std::cin>>player_choice;
+    } while (this->Fight_UI_Fight.judge_if_can_use_skill(player_choice, charactor)!= true);
+    return player_choice;
+}

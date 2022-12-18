@@ -7,7 +7,9 @@
 class Fight_UI {
 public:
     void show_character_info(Charactor charactor);
+    int get_player_skill_choice(Charactor charactor);
 private:
+    Fight Fight_UI_Fight;
 };
 
 
