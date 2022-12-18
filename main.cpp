@@ -4,8 +4,8 @@
 #include "Fight_engine.h"
 int main() {
     Charactor charactor1;
-    charactor1.set_current_blood(9);
+    charactor1.set_strength_power(10);
     Fight fight;
-    fight.magic_heal_little_heal(charactor1);
-    std::cout<<" "<<std::endl;
+    std::cout<<fight.judge_if_can_use_skill(0,charactor1)<<std::endl;
+
 }
