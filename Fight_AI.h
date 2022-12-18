@@ -6,6 +6,7 @@
 
 class Fight_AI {
 public:
+    
 private:
 
 };

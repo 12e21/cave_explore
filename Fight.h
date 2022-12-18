@@ -12,6 +12,7 @@ public:
     std::vector<int> strength_power_costs;
     void strength_attack_bare_hit(Charactor& caller ,Charactor& passer);
     void magic_heal_little_heal(Charactor& caller);
+    void wait();
     bool judge_if_can_use_skill(int skill_id,Charactor& caller);
 private:
 };

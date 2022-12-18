@@ -24,6 +24,8 @@ void Fight::magic_heal_little_heal(Charactor &caller) {
     }
     caller.set_magic_power(caller.get_magic_power()-2);
 }
+//技能编号3 等待(简介: 什么都不干)
+void Fight::wait() {}
 
 //检定
 //检定一个角色的体力值和魔力值是否够使用一个技能
