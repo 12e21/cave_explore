@@ -1,7 +1,7 @@
 
 
 #include "Fight_AI.h"
-//初级战斗AI,血量高时主攻击,血量低时主回血
+//初级战斗AI,血量高时主攻击,血量低时主回血(根据发起者情况判断)
 int Fight_AI::judge_conditions_return_skill_id(Charactor caller) {
     float caller_blood_percent=float(caller.get_current_blood())/float(caller.get_blood_upper_limit());
     if(caller_blood_percent<=0.3)
