@@ -1,8 +1,8 @@
 
 #include "Fight.h"
 Fight::Fight(){
-    this->magic_power_costs.assign({0,2});
-    this->strength_power_costs.assign({2,0});
+    this->magic_power_costs.assign({0,2,0});
+    this->strength_power_costs.assign({2,0,0});
 };
 Fight::~Fight()=default;
 //技能编号0 空手攻击(介绍:发动者体力值减2,被击者血量减2)
@@ -24,7 +24,7 @@ void Fight::magic_heal_little_heal(Charactor &caller) {
     }
     caller.set_magic_power(caller.get_magic_power()-2);
 }
-//技能编号3 等待(简介: 什么都不干)
+//技能编号2 等待(简介: 什么都不干)
 void Fight::wait() {}
 
 //检定

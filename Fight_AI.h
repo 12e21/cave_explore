@@ -6,8 +6,9 @@
 
 class Fight_AI {
 public:
-    
+    int judge_conditions_return_skill_id(Charactor caller);
 private:
+    Fight Fight_AI_fight;
 
 };
 
