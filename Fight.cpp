@@ -13,12 +13,13 @@ void Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
     //发击者体力减1
     caller.set_strength_power(caller.get_strength_power()-1);
 }
-//技能编号1 小治愈术(介绍:发动者血量加2,魔力减2)
+//技能编号1 小治愈术(介绍:发动者血量加1-3之间随机值,魔力减2)
 void Fight::magic_heal_little_heal(Charactor &caller) {
+    int heal_blood=this->build_a_random_int(1,3);
     //做一次检定,防止加超出总血
-    if(caller.get_current_blood()<=caller.get_blood_upper_limit()-2)
+    if(caller.get_current_blood()<=caller.get_blood_upper_limit()-heal_blood)
     {
-        caller.set_current_blood(caller.get_current_blood()+2);
+        caller.set_current_blood(caller.get_current_blood()+heal_blood);
     } else
     {
         caller.set_current_blood(caller.get_blood_upper_limit());

@@ -48,7 +48,9 @@ int Fight_engine::battle_two_characters(Charactor& player, Charactor& enemy) {
        {
            break;
        }
-
+       //占位用，等待用户输回车
+       char* position_str;
+       std::cin.getline(position_str,0);
        //敌人部分
        //敌人AI选择技能
        int enemy_skill_choice=Fight_engine_fight_AI.judge_conditions_return_skill_id(enemy);
