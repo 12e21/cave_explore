@@ -24,7 +24,13 @@ public:
     void set_strength_power(int strength_power_to_set);
     std::string get_name();
     void set_name(std::string name_to_set);
-
+    int get_experience_upper_limit();
+    void set_experience_upper_limit(int experience_upper_limit_to_set);
+    int get_current_experience();
+    void set_current_experience(int current_experience_to_set);
+    //等级相关方法
+    //添加经验并更新等级
+    void add_experience_and_update_level(int experience_to_add);
 private:
     //角色等级设定
     int level;
@@ -32,9 +38,16 @@ private:
     int blood_upper_limit;
     //角色的当前血量
     int current_blood;
+    //角色魔力
     int magic_power;
+    //角色体力值
     int strength_power;
+    //角色名
     std::string name;
+    //当前等级经验槽上限
+    int experience_upper_limit;
+    //当前槽内经验
+    int current_experience;
 };
 
 

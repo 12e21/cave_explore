@@ -5,11 +5,18 @@
 #include "Fight_AI.h"
 #include "Fight_UI.h"
 int main() {
-    Fight_engine fightEngine;
+    //战斗例程
+    /*Fight_engine fightEngine;
     Charactor player;
     Charactor enemy;
     player.set_name("player");
     enemy.set_name("enemy");
-    fightEngine.battle_two_characters(player,enemy);
+    fightEngine.battle_two_characters(player,enemy);*/
+
+    //升级例程
+    /*Charactor dragonBorn;
+    dragonBorn.add_experience_and_update_level(100);*/
+
+
 
 }

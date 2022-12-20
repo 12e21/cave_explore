@@ -3,6 +3,8 @@
 //初始化
 Charactor::Charactor() {
     this->level=1;
+    this->experience_upper_limit=10;
+    this->current_experience=0;
     this->blood_upper_limit=10;
     this->current_blood=10;
     this->magic_power=10;
@@ -46,4 +48,34 @@ std::string Charactor::get_name() {
 }
 void Charactor::set_name(std::string name_to_set) {
     this->name=name_to_set;
+}
+
+int Charactor::get_experience_upper_limit() {
+    return this->experience_upper_limit;
+}
+void Charactor::set_experience_upper_limit(int experience_upper_limit_to_set) {
+    this->experience_upper_limit=experience_upper_limit_to_set;
+}
+
+int Charactor::get_current_experience() {
+    return this->current_experience;
+}
+void Charactor::set_current_experience(int current_experience_to_set) {
+    this->current_experience=current_experience_to_set;
+}
+
+
+//经验方法
+//添加经验,更新等级方法
+void Charactor::add_experience_and_update_level(int experience_to_add) {
+    //先把经验加到经验槽中
+    this->current_experience+=experience_to_add;
+    //如果槽满,等级加1,槽扩大,经验清零,直到升到经验小于槽
+    while (this->current_experience>this->experience_upper_limit)
+    {
+        int additional_experience=current_experience-experience_upper_limit;
+        this->level+=1;
+        this->experience_upper_limit=level*10;
+        this->current_experience=additional_experience;
+    }
 }
