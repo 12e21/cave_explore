@@ -7,6 +7,7 @@ Fight::Fight(){
 Fight::~Fight()=default;
 //技能编号0 空手攻击(介绍:发动者体力值减2,被击者血量减2)
 void Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
+
     //被击者血量减2
     passer.set_current_blood(passer.get_current_blood()-2);
     //发击者体力减2
@@ -65,4 +66,14 @@ std::string Fight::skill_id_to_name(int skill_id) {
             return "等待";
     }
     return "空技能";
+}
+
+
+//杂项
+//生成指定范围内随机数
+int Fight::build_a_random_int(int min, int max) {
+    std::random_device seed;//硬件生成随机数种子
+    std::ranlux48 engine(seed());//利用种子生成随机数引擎
+    std::uniform_int_distribution<> distrib(min,max);//设置随机数范围，并为均匀分布
+    return distrib(engine);//随机数
 }
