@@ -34,8 +34,8 @@ public:
     void set_magic_power_upper_limit(int magic_power_upper_limit_to_set);
     int get_attack_power();
     void set_attack_power(int attack_power_to_set);
-    int get_defend_power();
-    void set_defend_power(int defend_power_to_set);
+    double get_defend_power();
+    void set_defend_power(double defend_power_to_set);
     //等级相关方法
     //添加经验并更新等级
     void add_experience_and_update_level(int experience_to_add);
@@ -63,7 +63,7 @@ private:
     //攻击力
     int attack_power;
     //防御力
-    int defend_power;
+    double defend_power;
 };
 
 
