@@ -9,7 +9,8 @@ int main() {
     /*Fight_engine fightEngine;
     Charactor player;
     Charactor enemy;
-    player.add_experience_and_update_level(15);
+    player.add_experience_and_update_level(0);
+    enemy.add_experience_and_update_level(50);
     player.set_name("player");
     enemy.set_name("enemy");
     fightEngine.battle_two_characters(player,enemy);*/
