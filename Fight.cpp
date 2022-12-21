@@ -5,9 +5,9 @@ Fight::Fight(){
     this->strength_power_costs.assign({2,0,0});
 };
 Fight::~Fight()=default;
-//技能编号0 空手攻击(介绍:发动者体力值减1,被击者血量减1-3中随机值,返回伤害)
+//技能编号0 空手攻击(介绍:发动者体力值减1,被击者血量减攻击力到攻击力+3中随机值,返回伤害)
 int Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
-    int damage=this->build_a_random_int(1,3);
+    int damage=this->build_a_random_int(caller.get_attack_power(),caller.get_attack_power()+3);
     //被击者血量减1-3随机值
     passer.set_current_blood(passer.get_current_blood()-damage);
     //发击者体力减1
