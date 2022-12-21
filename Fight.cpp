@@ -5,9 +5,9 @@ Fight::Fight(){
     this->strength_power_costs.assign({2,0,0});
 };
 Fight::~Fight()=default;
-//技能编号0 空手攻击(介绍:发动者体力值减1,被击者血量减攻击力到攻击力+3中随机值,返回伤害)
+//技能编号0 空手攻击(介绍:发动者体力值减1,被击者血量减攻击力到攻击力*1.5中随机值,返回伤害)
 int Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
-    int damage=this->build_a_random_int(caller.get_attack_power(),caller.get_attack_power()+3);
+    int damage=this->build_a_random_int(caller.get_attack_power(),int(caller.get_attack_power()*1.5));
     //被击者血量减1-3随机值
     passer.set_current_blood(passer.get_current_blood()-damage);
     //发击者体力减1
@@ -15,9 +15,9 @@ int Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
     //返回伤害值
     return damage;
 }
-//技能编号1 小治愈术(介绍:发动者血量加1-3之间随机值,魔力减2,返回治愈)
+//技能编号1 小治愈术(介绍:发动者血量加血槽的10%到30%之间随机值,魔力减2,返回治愈)
 int Fight::magic_heal_little_heal(Charactor &caller) {
-    int heal_blood=this->build_a_random_int(1,3);
+    int heal_blood=this->build_a_random_int(int(caller.get_blood_upper_limit()*0.1),int(caller.get_blood_upper_limit()*0.3));
     //做一次检定,防止加超出总血
     if(caller.get_current_blood()<=caller.get_blood_upper_limit()-heal_blood)
     {
