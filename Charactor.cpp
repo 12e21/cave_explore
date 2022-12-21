@@ -10,6 +10,8 @@ Charactor::Charactor() {
     this->magic_power=10;
     this->strength_power=10;
     this->name="initial_name";
+    this->strength_power_upper_limit=10;
+    this->magic_power_upper_limit=10;
 }
 Charactor::~Charactor() =default;
 //属性
@@ -62,6 +64,19 @@ int Charactor::get_current_experience() {
 }
 void Charactor::set_current_experience(int current_experience_to_set) {
     this->current_experience=current_experience_to_set;
+}
+int Charactor::get_strength_power_upper_limit() {
+    return this->strength_power_upper_limit;
+}
+void Charactor::set_strength_power_upper_limit(int strength_power_upper_limit_to_set) {
+    this->strength_power_upper_limit=strength_power_upper_limit_to_set;
+}
+int Charactor::get_magic_power_upper_limit() {
+    return this->magic_power_upper_limit;
+}
+
+void Charactor::set_magic_power_upper_limit(int magic_power_upper_limit_to_set) {
+    this->magic_power_upper_limit=magic_power_upper_limit_to_set;
 }
 
 
