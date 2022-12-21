@@ -15,8 +15,6 @@ int main() {
 
     //升级例程
     /*Charactor dragonBorn;
-    dragonBorn.add_experience_and_update_level(15);*/
-
-
+    dragonBorn.add_experience_and_update_level(100);*/
 
 }

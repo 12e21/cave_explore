@@ -12,6 +12,7 @@ Charactor::Charactor() {
     this->name="initial_name";
     this->strength_power_upper_limit=10;
     this->magic_power_upper_limit=10;
+    this->attack_power=1;
 }
 Charactor::~Charactor() =default;
 //属性
@@ -51,7 +52,6 @@ std::string Charactor::get_name() {
 void Charactor::set_name(std::string name_to_set) {
     this->name=name_to_set;
 }
-
 int Charactor::get_experience_upper_limit() {
     return this->experience_upper_limit;
 }
@@ -74,9 +74,14 @@ void Charactor::set_strength_power_upper_limit(int strength_power_upper_limit_to
 int Charactor::get_magic_power_upper_limit() {
     return this->magic_power_upper_limit;
 }
-
 void Charactor::set_magic_power_upper_limit(int magic_power_upper_limit_to_set) {
     this->magic_power_upper_limit=magic_power_upper_limit_to_set;
+}
+int Charactor::get_attack_power() {
+    return this->attack_power;
+}
+void Charactor::set_attack_power(int attack_power_to_set) {
+    this->attack_power=attack_power_to_set;
 }
 
 
@@ -94,6 +99,7 @@ void Charactor::add_experience_and_update_level(int experience_to_add) {
         this->blood_upper_limit=this->level*10;
         this->strength_power_upper_limit=this->level*10;
         this->magic_power_upper_limit=this->level*10;
+        this->attack_power+=level;
         this->current_experience=additional_experience;
     }
 }

@@ -32,6 +32,8 @@ public:
     void set_strength_power_upper_limit(int strength_power_upper_limit_to_set);
     int get_magic_power_upper_limit();
     void set_magic_power_upper_limit(int magic_power_upper_limit_to_set);
+    int get_attack_power();
+    void set_attack_power(int attack_power_to_set);
     //等级相关方法
     //添加经验并更新等级
     void add_experience_and_update_level(int experience_to_add);
@@ -56,6 +58,8 @@ private:
     int strength_power_upper_limit;
     //魔力槽
     int magic_power_upper_limit;
+    //攻击力
+    int attack_power;
 };
 
 
