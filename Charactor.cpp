@@ -90,7 +90,10 @@ void Charactor::add_experience_and_update_level(int experience_to_add) {
     {
         int additional_experience=current_experience-experience_upper_limit;
         this->level+=1;
-        this->experience_upper_limit=level*10;
+        this->experience_upper_limit=this->level*10;
+        this->blood_upper_limit=this->level*10;
+        this->strength_power_upper_limit=this->level*10;
+        this->magic_power_upper_limit=this->level*10;
         this->current_experience=additional_experience;
     }
 }
