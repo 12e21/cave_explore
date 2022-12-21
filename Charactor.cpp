@@ -13,6 +13,7 @@ Charactor::Charactor() {
     this->strength_power_upper_limit=10;
     this->magic_power_upper_limit=10;
     this->attack_power=1;
+    this->defend_power=1;
 }
 Charactor::~Charactor() =default;
 //属性
@@ -84,6 +85,14 @@ void Charactor::set_attack_power(int attack_power_to_set) {
     this->attack_power=attack_power_to_set;
 }
 
+int Charactor::get_defend_power() {
+    return this->defend_power;
+}
+
+void Charactor::set_defend_power(int defend_power_to_set) {
+    this->defend_power=defend_power_to_set;
+}
+
 
 //经验方法
 //添加经验,更新等级方法
@@ -100,6 +109,7 @@ void Charactor::add_experience_and_update_level(int experience_to_add) {
         this->strength_power_upper_limit=this->level*10;
         this->magic_power_upper_limit=this->level*10;
         this->attack_power+=level;
+        this->defend_power+=level;
         this->current_experience=additional_experience;
     }
 }
