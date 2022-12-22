@@ -2,7 +2,7 @@
 #ifndef CAVE_EXPLORE_FIGHT_H
 #define CAVE_EXPLORE_FIGHT_H
 #include "Action.h"
-#include "Human.h"
+#include "../Charactor/Human.h"
 #include <random>
 #include <vector>
 class Fight:public Action{

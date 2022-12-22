@@ -1,8 +1,8 @@
 
 #ifndef CAVE_EXPLORE_FIGHT_UI_H
 #define CAVE_EXPLORE_FIGHT_UI_H
-#include "Human.h"
-#include "Fight_AI.h"
+#include "../Charactor/Human.h"
+#include "../AI/Fight_AI.h"
 
 class Fight_UI {
 public:

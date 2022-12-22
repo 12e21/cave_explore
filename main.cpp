@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Human.h"
-#include "Fight.h"
-#include "Fight_engine.h"
-#include "Fight_AI.h"
-#include "Fight_UI.h"
+#include "Charactor/Human.h"
+#include "Action/Fight.h"
+#include "Engine/Fight_engine.h"
+#include "AI/Fight_AI.h"
+#include "UI/Fight_UI.h"
 int main() {
     //战斗例程
     /*Fight_engine fightEngine;
