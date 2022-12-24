@@ -4,6 +4,7 @@
 #include "Engine/Fight_engine.h"
 #include "AI/Fight_AI.h"
 #include "UI/Fight_UI.h"
+#include "Item/Bag.h"
 int main() {
     //战斗例程
     /*Fight_engine fightEngine;
@@ -18,4 +19,6 @@ int main() {
     //升级例程
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
+    
+
 }
