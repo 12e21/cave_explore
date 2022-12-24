@@ -93,6 +93,35 @@ void Charactor::set_defend_power(double defend_power_to_set) {
     this->defend_power=defend_power_to_set;
 }
 
+Weapon Charactor::get_character_weapon() {
+    return this->character_weapon;
+}
+void Charactor::set_character_weapon(Weapon character_weapon_to_set) {
+    this->character_weapon=character_weapon_to_set;
+}
+Armour Charactor::get_character_armour() {
+    return this->character_armour;
+}
+
+void Charactor::set_character_armour(Armour character_armour_to_set) {
+    this->character_armour=character_armour_to_set;
+}
+
+Accessory Charactor::get_character_accessory() {
+    return this->character_accessory;
+}
+
+void Charactor::set_character_accessory(Accessory character_accessory_to_set) {
+    this->character_accessory=character_accessory_to_set;
+}
+
+Bag Charactor::get_character_bag() {
+    return this->character_bag;
+}
+
+void Charactor::set_character_bag(Bag character_bag_to_set) {
+    this->character_bag=character_bag_to_set;
+}
 
 //经验方法
 //添加经验,更新等级方法

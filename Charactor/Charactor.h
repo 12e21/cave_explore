@@ -5,7 +5,10 @@
 #ifndef CAVE_EXPLORE_CHARACTOR_H
 #define CAVE_EXPLORE_CHARACTOR_H
 #include <iostream>
-
+#include "../Item/Weapon.h"
+#include "../Item/Armour.h"
+#include "../Item/Accessory.h"
+#include "../Item/Bag.h"
 class Charactor {
 public:
     //构造/析构函数
@@ -36,6 +39,14 @@ public:
     void set_attack_power(int attack_power_to_set);
     double get_defend_power();
     void set_defend_power(double defend_power_to_set);
+    Weapon get_character_weapon();
+    void set_character_weapon(Weapon character_weapon_to_set);
+    Armour get_character_armour();
+    void set_character_armour(Armour character_armour_to_set);
+    Accessory get_character_accessory();
+    void set_character_accessory(Accessory character_accessory_to_set);
+    Bag get_character_bag();
+    void set_character_bag(Bag character_bag_to_set);
     //等级相关方法
     //添加经验并更新等级
     void add_experience_and_update_level(int experience_to_add);
@@ -64,6 +75,14 @@ private:
     int attack_power;
     //防御力
     double defend_power;
+    //角色武器
+    Weapon character_weapon;
+    //角色盔甲
+    Armour character_armour;
+    //角色饰品
+    Accessory character_accessory;
+    //角色背包
+    Bag character_bag;
 };
 
 
