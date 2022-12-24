@@ -7,7 +7,8 @@ class Human: public Charactor {
 public:
     Human();
     ~Human();
-private:
+
+protected:
 
 };
 

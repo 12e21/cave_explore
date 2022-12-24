@@ -7,7 +7,7 @@
 
 class Engine {
 public:
-private:
+protected:
 };
 
 

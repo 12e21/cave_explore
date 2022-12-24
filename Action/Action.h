@@ -6,7 +6,7 @@ class Action {
 public:
     Action();
     ~Action();
-private:
+protected:
 
 };
 

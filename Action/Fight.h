@@ -18,7 +18,7 @@ public:
     int call_skill_according_id(Charactor& caller,Charactor& passer,int skill_id);
     std::string skill_id_to_name(int skill_id);
     int build_a_random_int(int min,int max);
-private:
+protected:
 };
 
 

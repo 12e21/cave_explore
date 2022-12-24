@@ -19,12 +19,4 @@ int main() {
     //升级例程
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
-    Bag bag;
-    Weapon weapon1;
-    Weapon weapon2;
-    Weapon weapon3;
-    bag.load_a_weapon_to_bag(weapon1);
-    bag.load_a_weapon_to_bag(weapon2);
-//    bag.pop_a_weapon(1,weapon3);
-    int a=0;
 }

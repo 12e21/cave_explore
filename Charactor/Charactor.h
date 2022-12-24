@@ -47,7 +47,8 @@ public:
     //等级相关方法
     //添加经验并更新等级
     void add_experience_and_update_level(int experience_to_add);
-private:
+
+protected:
     //角色等级设定
     int level;
     //角色血量上限

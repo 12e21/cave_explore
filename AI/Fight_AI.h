@@ -4,10 +4,10 @@
 #define CAVE_EXPLORE_FIGHT_AI_H
 
 
-class Fight_AI {
+class Fight_AI: public AI{
 public:
     int judge_conditions_return_skill_id(Charactor caller);
-private:
+protected:
     Fight Fight_AI_fight;
 
 };
