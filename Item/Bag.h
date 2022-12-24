@@ -20,6 +20,11 @@ public:
     bool load_a_weapon_to_bag(Weapon weapon_to_load);
     bool load_a_armour_to_bag(Armour armour_to_load);
     bool load_a_accessory_to_bag(Accessory accessory_to_load);
+    //按索引取出背包中物品(返回为真则取出成功,返回为假则取出失败)
+    bool pop_a_weapon(int weapon_to_pop_index,Weapon& weapon_to_pop);
+    bool pop_a_armour(int armour_to_pop_index,Armour& armour_to_pop);
+    bool pop_a_accessory(int accessory_to_pop_index,Accessory& accessory_to_pop);
+
 
 private:
     int weapon_contain_count;
