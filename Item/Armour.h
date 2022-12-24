@@ -4,8 +4,11 @@
 #define CAVE_EXPLORE_ARMOUR_H
 
 
-class Armour:Equipment {
-
+class Armour: public Equipment {
+public:
+    Armour();
+    ~Armour();
+private:
 };
 
 

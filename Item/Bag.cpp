@@ -3,6 +3,8 @@
 #include "Bag.h"
 //默认背包容量:武器:2,盔甲:1,饰品:5
 Bag::Bag() {
+    this->item_name="normal_bag";
+
     this->weapons_cbegin=weapons.cbegin();
     this->armours_cbegin=armours.cbegin();
     this->accessorys_cbegin=accessorys.cbegin();

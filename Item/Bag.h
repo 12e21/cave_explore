@@ -7,7 +7,7 @@
 #define CAVE_EXPLORE_BAG_H
 
 
-class Bag:Equipment {
+class Bag: public Equipment {
 public:
     Bag();
     ~Bag();
@@ -26,7 +26,7 @@ public:
     bool pop_a_accessory(int accessory_to_pop_index,Accessory& accessory_to_pop);
 
 
-private:
+protected:
     int weapon_contain_count;
     int weapon_current_count;
     int armour_contain_count;

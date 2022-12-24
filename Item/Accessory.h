@@ -3,8 +3,11 @@
 #define CAVE_EXPLORE_ACCESSORY_H
 
 
-class Accessory {
-
+class Accessory: public Equipment{
+public:
+    Accessory();
+    ~Accessory();
+private:
 };
 
 

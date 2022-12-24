@@ -3,3 +3,7 @@
 //
 
 #include "Armour.h"
+Armour::Armour() {
+    this->item_name="initial_amour_name";
+}
+Armour::~Armour() =default;
