@@ -5,9 +5,6 @@
 #ifndef CAVE_EXPLORE_CHARACTOR_H
 #define CAVE_EXPLORE_CHARACTOR_H
 #include <iostream>
-#include "../Item/Weapon.h"
-#include "../Item/Armour.h"
-#include "../Item/Accessory.h"
 #include "../Item/Bag.h"
 class Charactor {
 public:
