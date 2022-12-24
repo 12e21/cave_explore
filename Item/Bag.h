@@ -11,6 +11,9 @@ class Bag:Equipment {
 public:
     Bag();
     ~Bag();
+    std::vector<Weapon>::const_iterator weapons_cbegin;
+    std::vector<Armour>::const_iterator armours_cbegin;
+    std::vector<Accessory>::const_iterator accessorys_cbegin;
 private:
     int weapon_contain_count;
     int weapon_current_count;
