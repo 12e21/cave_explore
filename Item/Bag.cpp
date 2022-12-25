@@ -5,9 +5,6 @@
 Bag::Bag() {
     this->item_name="normal_bag";
 
-    this->weapons_cbegin=weapons.cbegin();
-    this->armours_cbegin=armours.cbegin();
-    this->accessorys_cbegin=accessorys.cbegin();
 
     this->weapon_contain_count=2;
     this->weapon_current_count=0;
@@ -22,6 +19,31 @@ Bag::Bag() {
     this->accessorys.clear();
 }
 Bag::~Bag()=default;
+
+//读取容量和存储数的属性
+int Bag::get_weapon_contain_count() {
+    return this->weapon_contain_count;
+}
+
+int Bag::get_weapon_current_count() {
+    return this->weapon_current_count;
+}
+
+int Bag::get_armour_contain_count() {
+    return this->armour_contain_count;
+}
+
+int Bag::get_armour_current_count() {
+    return this->armour_current_count;
+}
+
+int Bag::get_accessory_contain_count() {
+    return this->accessory_contain_count;
+}
+
+int Bag::get_accessory_current_count() {
+    return this->accessory_current_count;
+}
 //装物品
 bool Bag::load_a_weapon_to_bag(Weapon weapon_to_load) {
     if(this->weapon_current_count==this->weapon_contain_count){
