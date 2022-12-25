@@ -21,12 +21,14 @@ int main() {
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
 
-    Armour armour1;
-    Armour armour2;
-    Bag_UI bagUi;
+    Accessory accessory1;
+    Accessory accessory2;
     Bag bag;
-    bag.load_a_armour_to_bag(armour1);
-    bool bag_two=bag.load_a_armour_to_bag(armour2);
-    bagUi.show_armours_in_a_bag(bag);
+    Bag_UI bagUi;
+    bag.load_a_accessory_to_bag(accessory1);
+    bag.load_a_accessory_to_bag(accessory2);
+    bag.load_a_accessory_to_bag(accessory1);
+    bagUi.show_accessorys_in_a_bag(bag);
+
 
 }
