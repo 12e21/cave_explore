@@ -7,8 +7,10 @@
 class Weapon: public Equipment {
 public:
     Weapon();
+    Weapon(int weapon_level);
     ~Weapon();
 protected:
+    int add_attack_power;
 };
 
 

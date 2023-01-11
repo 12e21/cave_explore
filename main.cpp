@@ -11,8 +11,8 @@ int main() {
     /*Fight_engine fightEngine;
     Charactor player;
     Charactor enemy;
-    player.add_experience_and_update_level(0);
-    enemy.add_experience_and_update_level(50);
+    player.add_experience_and_update_level(200);
+    enemy.add_experience_and_update_level(0);
     player.set_name("player");
     enemy.set_name("enemy");
     fightEngine.battle_two_characters(player,enemy);*/
@@ -21,14 +21,13 @@ int main() {
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
 
-    Accessory accessory1;
+    /*Accessory accessory1;
     Accessory accessory2;
     Bag bag;
     Bag_UI bagUi;
     bag.load_a_accessory_to_bag(accessory1);
     bag.load_a_accessory_to_bag(accessory2);
     bag.load_a_accessory_to_bag(accessory1);
-    bagUi.show_accessorys_in_a_bag(bag);
-
+    bagUi.show_accessorys_in_a_bag(bag);*/
 
 }
