@@ -12,6 +12,7 @@ public:
     void show_weapons_in_a_bag(Bag bag_to_show);
     void show_armours_in_a_bag(Bag bag_to_show);
     void show_accessorys_in_a_bag(Bag bag_to_show);
+    void show_all_in_a_bag(Bag bag_to_show);
 protected:
 };
 

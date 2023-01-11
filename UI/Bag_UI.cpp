@@ -55,3 +55,9 @@ void Bag_UI::show_accessorys_in_a_bag(Bag bag_to_show) {
         }
     }
 }
+
+void Bag_UI::show_all_in_a_bag(Bag bag_to_show) {
+    this->show_weapons_in_a_bag(bag_to_show);
+    this->show_armours_in_a_bag(bag_to_show);
+    this->show_accessorys_in_a_bag(bag_to_show);
+}

@@ -21,13 +21,14 @@ int main() {
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
 
-    /*Accessory accessory1;
+    Accessory accessory1;
     Accessory accessory2;
+    Weapon wood_knife(1);
     Bag bag;
     Bag_UI bagUi;
     bag.load_a_accessory_to_bag(accessory1);
     bag.load_a_accessory_to_bag(accessory2);
-    bag.load_a_accessory_to_bag(accessory1);
-    bagUi.show_accessorys_in_a_bag(bag);*/
+    bag.load_a_weapon_to_bag(wood_knife);
+    bagUi.show_all_in_a_bag(bag);
 
 }
