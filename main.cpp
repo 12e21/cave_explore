@@ -9,10 +9,12 @@
 int main() {
     //战斗例程
     /*Fight_engine fightEngine;
+    Weapon wood_knife(1);
     Charactor player;
     Charactor enemy;
-    player.add_experience_and_update_level(200);
-    enemy.add_experience_and_update_level(0);
+    player.set_character_weapon(wood_knife);
+    player.add_experience_and_update_level(13);
+    enemy.add_experience_and_update_level(50);
     player.set_name("player");
     enemy.set_name("enemy");
     fightEngine.battle_two_characters(player,enemy);*/
@@ -21,7 +23,8 @@ int main() {
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
 
-    Accessory accessory1;
+    //装备例程
+    /*Accessory accessory1;
     Accessory accessory2;
     Weapon wood_knife(1);
     Bag bag;
@@ -29,6 +32,6 @@ int main() {
     bag.load_a_accessory_to_bag(accessory1);
     bag.load_a_accessory_to_bag(accessory2);
     bag.load_a_weapon_to_bag(wood_knife);
-    bagUi.show_all_in_a_bag(bag);
+    bagUi.show_all_in_a_bag(bag);*/
 
 }

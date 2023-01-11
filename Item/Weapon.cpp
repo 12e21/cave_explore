@@ -1,6 +1,7 @@
 
 
 #include "Weapon.h"
+//构造函数&析构函数
 Weapon::Weapon() {
     this->item_name="空手";
     this->add_attack_power=0;
@@ -26,3 +27,11 @@ Weapon::Weapon(int weapon_level) {
     }
 }
 Weapon::~Weapon()=default;
+//属性
+int Weapon::get_add_attack_power() {
+    return this->add_attack_power;
+}
+
+void Weapon::set_add_attack_power(int add_attack_power_to_set) {
+    this->add_attack_power=add_attack_power_to_set;
+}

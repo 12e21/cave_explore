@@ -17,6 +17,7 @@ int Fight_UI::get_player_skill_choice(Charactor charactor) {
     std::cout<<"空手击打         0 "<<std::endl;
     std::cout<<"小治愈术         1 "<<std::endl;
     std::cout<<"等待             2 "<<std::endl;
+    std::cout<<"武器攻击          3 "<<std::endl;
     std::cout<<"\n"<<std::endl;
     do {
         std::cout << "请输入你选择的符合条件的技能:" << std::endl;
@@ -39,5 +40,12 @@ void Fight_UI::battle_over(Charactor winner, Charactor loser) {
 }
 
 void Fight_UI::call_skill_description(Charactor caller, int skill_id,int skill_result_val) {
-    std::cout<<caller.get_name()<<" 发动了 "<<Fight_UI_Fight.skill_id_to_name(skill_id)<<"  数值为:  "<<skill_result_val<<std::endl;
+    if(skill_id==3)
+    {
+        std::cout<<caller.get_name()<<"使用"<<caller.get_character_weapon().get_item_name()<<" 发动了 "<<Fight_UI_Fight.skill_id_to_name(skill_id)<<"  数值为:  "<<skill_result_val<<std::endl;
+    } else
+    {
+        std::cout<<caller.get_name()<<" 发动了 "<<Fight_UI_Fight.skill_id_to_name(skill_id)<<"  数值为:  "<<skill_result_val<<std::endl;
+    }
+
 }

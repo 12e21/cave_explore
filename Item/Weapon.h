@@ -9,6 +9,8 @@ public:
     Weapon();
     Weapon(int weapon_level);
     ~Weapon();
+    int get_add_attack_power();
+    void set_add_attack_power(int add_attack_power_to_set);
 protected:
     int add_attack_power;
 };

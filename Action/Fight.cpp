@@ -1,17 +1,17 @@
 
 #include "Fight.h"
 Fight::Fight(){
-    this->magic_power_costs.assign({0,2,0});
-    this->strength_power_costs.assign({2,0,0});
+    this->magic_power_costs.assign({0,2,0,0});
+    this->strength_power_costs.assign({1,0,0,3});
 };
 Fight::~Fight()=default;
 //技能编号0 空手攻击(介绍:发动者体力值减1,被击者血量减攻击力到攻击力*1.5中随机值再乘对方防御系数,返回伤害)
 int Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
-    //生成伤害
+    //生成伤害,发起者攻击力乘1到1.5
     int damage=this->build_a_random_int(caller.get_attack_power(),int(caller.get_attack_power()*1.5));
     //伤害乘受击方防御系数
     damage=int(damage*(1.0-passer.get_defend_power()))+1;
-    //被击者血量减1-3随机值
+    //被击者血量减伤害值
     passer.set_current_blood(passer.get_current_blood()-damage);
     //发击者体力减1
     caller.set_strength_power(caller.get_strength_power()-1);
@@ -36,6 +36,19 @@ int Fight::magic_heal_little_heal(Charactor &caller) {
 //技能编号2 等待(简介: 什么都不干)
 int Fight::wait() {
     return 0;
+}
+//技能编号3 武器攻击(介绍:发动者体力值减3,被击者血量减攻击力到攻击力*1.5中随机值加武器攻击力再乘对方防御系数,返回伤害)
+int Fight::strength_attack_weapon_hit(Charactor &caller, Charactor &passer) {
+    //生成伤害,发起者攻击力乘1到1.5再加武器攻击力
+    int damage=this->build_a_random_int(caller.get_attack_power(),int(caller.get_attack_power()*1.5))+caller.get_character_weapon().get_add_attack_power();
+    //伤害乘受击方防御系数
+    damage=int(damage*(1.0-passer.get_defend_power()))+1;
+    //被击者血量减伤害值
+    passer.set_current_blood(passer.get_current_blood()-damage);
+    //发击者体力减3
+    caller.set_strength_power(caller.get_strength_power()-3);
+    //返回伤害值
+    return damage;
 }
 
 //检定
@@ -64,6 +77,8 @@ int Fight::call_skill_according_id(Charactor& caller, Charactor& passer, int ski
         case 2:
             skill_result_value=this->wait();
             break;
+        case 3:
+            skill_result_value=this->strength_attack_weapon_hit(caller,passer);
     }
     return skill_result_value;
 }
@@ -76,6 +91,8 @@ std::string Fight::skill_id_to_name(int skill_id) {
             return "小治愈术";
         case 2:
             return "等待";
+        case 3:
+            return "武器击打";
     }
     return "空技能";
 }
