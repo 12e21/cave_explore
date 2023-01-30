@@ -10,7 +10,9 @@ int Fight::strength_attack_bare_hit(Charactor& caller, Charactor& passer) {
     //生成伤害,发起者攻击力乘1到1.5
     int damage=this->build_a_random_int(caller.get_attack_power(),int(caller.get_attack_power()*1.5));
     //伤害乘受击方防御系数
-    damage=int(damage*(1.0-passer.get_defend_power()))+1;
+    //根据等级防御系数和盔甲防御系数折算总防御系数
+    double total_defend_power=passer.get_defend_power()+passer.get_character_armour().get_add_defend_power();
+    damage=int(damage*(1.0-total_defend_power))+1;
     //被击者血量减伤害值
     passer.set_current_blood(passer.get_current_blood()-damage);
     //发击者体力减1
@@ -42,7 +44,9 @@ int Fight::strength_attack_weapon_hit(Charactor &caller, Charactor &passer) {
     //生成伤害,发起者攻击力乘1到1.5再加武器攻击力
     int damage=this->build_a_random_int(caller.get_attack_power(),int(caller.get_attack_power()*1.5))+caller.get_character_weapon().get_add_attack_power();
     //伤害乘受击方防御系数
-    damage=int(damage*(1.0-passer.get_defend_power()))+1;
+    //根据等级防御系数和盔甲防御系数折算总防御系数
+    double total_defend_power=passer.get_defend_power()+passer.get_character_armour().get_add_defend_power();
+    damage=int(damage*(1.0-total_defend_power))+1;
     //被击者血量减伤害值
     passer.set_current_blood(passer.get_current_blood()-damage);
     //发击者体力减3
