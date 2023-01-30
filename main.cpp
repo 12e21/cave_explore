@@ -7,11 +7,12 @@
 #include "Item/Bag.h"
 #include "UI/Bag_UI.h"
 int main() {
-    //战斗例程
+    /*******战斗例程******/
     /*Fight_engine fightEngine;
     Weapon wood_knife(1);
     Charactor player;
     Charactor enemy;
+     //给角色装备武器
     player.set_character_weapon(wood_knife);
     player.add_experience_and_update_level(13);
     enemy.add_experience_and_update_level(50);
@@ -19,11 +20,11 @@ int main() {
     enemy.set_name("enemy");
     fightEngine.battle_two_characters(player,enemy);*/
 
-    //升级例程
+    /********升级例程*******/
     /*Charactor dragonBorn;
     dragonBorn.add_experience_and_update_level(100);*/
 
-    //装备例程
+    /******装备例程*****/
     /*Accessory accessory1;
     Accessory accessory2;
     Weapon wood_knife(1);
